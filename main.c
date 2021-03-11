@@ -38,7 +38,7 @@ int main(int argc, char** argv)
                 n++;
                 v = 0;
             }
-            else if (deckchar[u] < '0' && deckchar[u] > '9') {
+            else if (deckchar[u] < '0' || deckchar[u] > '9') {
                 break;
             }
             else {
@@ -46,8 +46,11 @@ int main(int argc, char** argv)
                 v++;
             }
         }
-        buffer[v] = '\0';
-        deck[n / 13][n % 13] = atoi(buffer);
+        if (n < 52) {
+            buffer[v] = '\0';
+            deck[n / 13][n % 13] = atoi(buffer);
+        }
+       
     }
     else {
         srand(time(0)); /* seed random-number generator */
