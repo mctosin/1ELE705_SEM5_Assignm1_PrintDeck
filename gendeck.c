@@ -8,7 +8,7 @@
 void shuffle(int wDeck[][13]);
 void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[], const int Ncolumns);
 
-int main()
+int main(int argc, char* argv[])
 {
     /* initialize suit array */
     const char* suit[4] = { "Hearts", "Diamonds", "Clubs", "Spades" };
@@ -25,13 +25,16 @@ int main()
     srand(time(0)); /* seed random-number generator */
     shuffle(deck);
   
-    // print_deck(deck, face, suit, 2);
-
-    fprintf(stderr, "\n");
-    int i, j;
-    for (i = 0; i < 4; i++) {
-        for (j = 0; j < 13; j++) {
-            printf("%d ", deck[i][j]);
+    if (*argv[1] == 'p') {
+        print_deck(deck, face, suit, 2);
+    }
+    else {
+        fprintf(stderr, "\n");
+        int i, j;
+        for (i = 0; i < 4; i++) {
+            for (j = 0; j < 13; j++) {
+                printf("%d ", deck[i][j]);
+            }
         }
     }
 

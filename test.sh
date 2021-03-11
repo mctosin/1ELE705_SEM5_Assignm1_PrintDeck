@@ -6,8 +6,9 @@ echo
 #"input" entre aspas toma uma única string. Sem aspas considera varias strings separadas por espaço"
 input1=$1
 input2=$2
+input3=$3
 
-expected_output=$(./gendeck.o)
+expected_output=$(./gendeck.o "$input3")
 
 output=$(./main.o "$input1" "$input2" "$expected_output")
 

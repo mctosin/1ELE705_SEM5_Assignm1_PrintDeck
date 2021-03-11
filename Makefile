@@ -1,5 +1,5 @@
 test: clean main.o
-	bash test.sh "1" "2"
+	bash test.sh "1" "2" "d"
 	
 main.o:
 	gcc main.c -o main.o
