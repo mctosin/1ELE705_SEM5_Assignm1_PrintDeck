@@ -8,7 +8,7 @@ input1=$1
 input2=$2
 input3=$3
 
-expected_output=$(./gendeck.o "$input2" "$input3")
+expected_output=$(./gendeck.o "2" "d")
 
 output=$(./main.o "$input1" "$input2" "$expected_output")
 
