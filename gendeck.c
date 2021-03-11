@@ -25,8 +25,8 @@ int main(int argc, char* argv[])
     srand(time(0)); /* seed random-number generator */
     shuffle(deck);
   
-    if (*argv[1] == 'p') {
-        print_deck(deck, face, suit, 2);
+    if (*argv[2] == 'p') {
+        print_deck(deck, face, suit, atoi(argv[1]));
     }
     else {
         fprintf(stderr, "\n");
@@ -90,7 +90,7 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
 
                         /* if slot contains current card, display card */
                     if (wDeck[row][column] == card) {
-                        fprintf(stderr, "%5s of %-8s%c", wFace[column], wSuit[row],
+                        printf("%5s of %-8s%c", wFace[column], wSuit[row],
                             card % 2 == 0 ? '\n' : '\t');
                     } /* end if */
                     break;
@@ -99,7 +99,7 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
 
                         /* if slot contains current card, display card */
                     if (wDeck[row][column] == card) {
-                        fprintf(stderr, "%5s of %-8s%c", wFace[column], wSuit[row],
+                        printf("%5s of %-8s%c", wFace[column], wSuit[row],
                             card % 3 == 0 ? '\n' : '\t');
                     } /* end if */
                     break;
@@ -108,7 +108,7 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
 
                         /* if slot contains current card, display card */
                     if (wDeck[row][column] == card) {
-                        fprintf(stderr, "%5s of %-8s%c", wFace[column], wSuit[row], '\n');
+                        printf("%5s of %-8s%c", wFace[column], wSuit[row], '\n');
                     } /* end if */
                     break;
                 }
