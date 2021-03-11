@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
         print_deck(deck, face, suit, atoi(argv[1]));
     }
     else {
-        fprintf(stderr, "\n");
+        //fprintf(stderr, "\n");
         int i, j;
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 13; j++) {
@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    fprintf(stderr, "\n");
+   // fprintf(stderr, "\n");
 
     return 0; /* indicates successful termination */
 

@@ -54,19 +54,19 @@ int main(int argc, char** argv)
         shuffle(deck);
     }
     
-    print_deck(deck, face, suit, Ncolunas);
+    //print_deck(deck, face, suit, Ncolunas);
 
-    fprintf(stderr, "\n");
+    //fprintf(stderr, "\n");
     int i, j;
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 13; j++) {
-            fprintf(stderr, "%d ", deck[i][j]);
+            printf("%d ", deck[i][j]);
         }
     }
-    fprintf(stderr, "\n");
+   // fprintf(stderr, "\n");
 
-    fprintf(stderr, "%s", argv[3]);
-    fprintf(stderr, "\n");
+  //  fprintf(stderr, "%s", argv[3]);
+  //  fprintf(stderr, "\n");
     return 0; /* indicates successful termination */
 
 } /* end main */
