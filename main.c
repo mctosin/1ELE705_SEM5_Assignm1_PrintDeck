@@ -54,15 +54,17 @@ int main(int argc, char** argv)
         shuffle(deck);
     }
     
-    //print_deck(deck, face, suit, Ncolunas);
+    print_deck(deck, face, suit, Ncolunas);
 
     //fprintf(stderr, "\n");
+   /*
     int i, j;
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 13; j++) {
             printf("%d ", deck[i][j]);
         }
     }
+   */
    // fprintf(stderr, "\n");
 
   //  fprintf(stderr, "%s", argv[3]);

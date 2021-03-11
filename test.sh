@@ -6,11 +6,14 @@ echo
 #"input" entre aspas toma uma única string. Sem aspas considera varias strings separadas por espaço"
 input1=$1
 input2=$2
-input3=$3
 
-expected_output=$(./gendeck.o "$input2" "$input3")
+# 2o atributo do gendeck "p" imprime as cartas.
+# "d" imprime os dados ou a posição das cartas no monte
 
-output=$(./main.o "$input1" "$input2" "$expected_output")
+expected_output=$(./gendeck.o "$input2" "p")
+input3=$(./gendeck.o "$input2" "d")
+
+output=$(./main.o "$input1" "$input2" "$input3")
 
 
 if [ $? -eq 0 ] ; then

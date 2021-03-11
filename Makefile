@@ -7,11 +7,7 @@ test: clean main.o
 #input2="N" N:1,2,3 Número de colunas de cartas a 
 #serem impressas. Atributo do main e do gendeck
 
-#input3="p" imprime as cartas. Qualquer outra
-#entrada imprime a posição das cartas no monte
-#Atributo do gendeck apenas.
-
-	bash test.sh "1" "2" "d"
+	bash test.sh "1" "2"
 	
 main.o:
 	gcc main.c -o main.o
