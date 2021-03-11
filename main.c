@@ -9,6 +9,9 @@ void shuffle(int wDeck[][13]);
 void deal(const int wDeck[][13], const char* wFace[], const char* wSuit[]);
 void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[], const int Ncolumns);
 
+/* Constantes */
+#define Num_Colunas 3
+
 int main(int argc, char** argv)
 {
     /* initialize suit array */
@@ -24,7 +27,7 @@ int main(int argc, char** argv)
     int deck[4][13] = { 0 };
 
     /* Troque o valor de Ncolunas para verificar seu código */
-    int Ncolunas = 2;
+    int Ncolunas = Num_Colunas;
 
     if (*argv[1] == '1') {
         Ncolunas = atoi(argv[2]);
@@ -161,7 +164,8 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
                         /* if slot contains current card, display card */
                         if (wDeck[row][column] == card) {
                             printf("%5s of %-8s%c", wFace[column], wSuit[row],
-                                card % 3 == 0 ? '\n' : '\t');
+                                //card % 3 == 0 ? '\n' : '\t');
+                                card < 52 ? (card % 3 == 0 ? '\n' : '\t') : '\n');
                         } /* end if */
                     break;
                 default:

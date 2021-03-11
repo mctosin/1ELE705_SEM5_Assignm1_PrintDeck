@@ -100,7 +100,8 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
                         /* if slot contains current card, display card */
                     if (wDeck[row][column] == card) {
                         printf("%5s of %-8s%c", wFace[column], wSuit[row],
-                            card % 3 == 0 ? '\n' : '\t');
+                            //card % 3 == 0 ? '\n' : '\t');
+                            card < 52 ? (card % 3 == 0 ? '\n' : '\t') : '\n');
                     } /* end if */
                     break;
                 default:
