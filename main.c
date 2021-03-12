@@ -163,7 +163,7 @@ void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[],
     uma coluna.
         A função print-deck deverá obedecer as mesmas regras de impressão das colunas utilizadas
     na implementação da função deal.
-        Adicionalmente, você deve atentar-se para o fato que após a impressão da última carta
-    a função deve imprimir um <enter> (pula linha '\n'), como o faz no exemplo de duas colunas 
-    implementado na função deal.
+        Adicionalmente, você deve atentar-se para o fato que após a impressão da string relativa 
+    a última carta, a função deve imprimir um <enter> (pula linha '\n'), como o faz no exemplo de 
+    duas colunas implementado na função deal.
 */
