@@ -10,7 +10,7 @@ void deal(const int wDeck[][13], const char* wFace[], const char* wSuit[]);
 void print_deck(const int wDeck[][13], const char* wFace[], const char* wSuit[], const int Ncolumns);
 
 /* Constantes */
-#define Num_Colunas 3
+#define Num_Colunas 2
 
 int main(int argc, char** argv)
 {
